@@ -1,0 +1,40 @@
+{
+  "name": "fantastic-doodle",
+  "version": "1.0.0",
+  "description": "Ramda js snippets",
+  "main": "index.js",
+  "scripts": {
+    "spec": "cross-env mocha --require @babel/register --reporter spec",
+    "test": "npm run spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCotton/fantastic-doodle.git"
+  },
+  "keywords": [
+    "ramdajs"
+  ],
+  "author": "Andrew Walpole",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TCotton/fantastic-doodle/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/TCotton/fantastic-doodle#readme",
+  "devDependencies": {
+    "@babel/cli": "7.13.16",
+    "@babel/core": "7.13.16",
+    "@babel/preset-env": "7.13.15",
+    "@babel/register": "7.13.16",
+    "chai": "4.3.4",
+    "cross-env": "7.0.3",
+    "jasmine": "3.7.0",
+    "mocha": "8.3.2",
+    "nyc": "15.1.0",
+    "sinon": "10.0.0",
+    "testem": "3.4.1"
+  },
+  "dependencies": {
+    "ramda": "0.27.1"
+  }
+}
