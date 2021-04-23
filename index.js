@@ -4,15 +4,9 @@ const addition = (x, y) => {
     return x + y;
 }
 
-const filterByPropsAndValues = (data) => {
-    const executive = R.filter(R.propEq('seniority', 'executive-board'))
-    const nonExecutive = R.filter(
-        R.propEq('seniority', 'management-team' || 'Non-executive')
-    )
-    return {
-        executive: executive(data),
-        nonExecutive: nonExecutive(data),
-    }
+const filterByPropsAndValues = (data, prop, value) => {
+    const returned = R.filter(R.propEq(prop, value))
+    return returned(data)
 }
 
 export {addition, filterByPropsAndValues}
