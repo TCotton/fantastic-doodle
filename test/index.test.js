@@ -1,4 +1,4 @@
-import {addition, filterByPropsAndValues, findAllUniqueValues} from '../index.js'
+import {addition, filterByPropsAndValues, findAllUniqueValues, removeEmptyArrayItems} from '../index.js'
 import {assert, should, expect} from 'chai';
 import {readFile} from 'fs/promises';
 
@@ -61,5 +61,21 @@ describe('findAllUniqueValues', () => {
         assert.strictEqual(result[0] === 'Germany', true)
         assert.strictEqual(result[1] === 'Ireland', true)
         assert.strictEqual(result[2] === 'Spain', true)
+    });
+})
+
+describe('removeEmptyArrayItems', () => {
+
+    const anArray = [0,3,4,null]
+
+    it('should return an array', function () {
+        const result = removeEmptyArrayItems(anArray)
+        expect(result).not.to.be.undefined;
+        assert.typeOf(result, 'array')
+    });
+    it('should return remove empty arrays', function () {
+        const result = removeEmptyArrayItems(anArray)
+        expect(result).not.to.be.undefined;
+        assert.strictEqual(result.length, 3)
     });
 })

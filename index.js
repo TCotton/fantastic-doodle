@@ -17,4 +17,9 @@ const findAllUniqueValues = (data) => {
     return list(regions)
 }
 
-export {addition, filterByPropsAndValues, findAllUniqueValues}
+const removeEmptyArrayItems = (data) => {
+    const notEmpty = R.compose(R.not, R.isNil)
+    return R.filter(notEmpty, data)
+}
+
+export {addition, filterByPropsAndValues, findAllUniqueValues, removeEmptyArrayItems}
