@@ -1,6 +1,7 @@
 import * as R from 'ramda';
 
 const addition = (x, y) => {
+    if (typeof x !== 'number' && typeof y !== 'number') return null;
     return x + y;
 }
 
@@ -10,11 +11,11 @@ const filterByPropsAndValues = (data, prop, value) => {
 }
 
 const findAllUniqueValues = (data) => {
-    const regions = data.map((x) => x.region && x.region.toString())
+    const findRegions = data.map((x) => x.region && x.region.toString())
     const removeNull = R.reject(R.equals(null))
     const sortNamesAsc = R.sortBy(R.identity)
-    const list = R.compose(removeNull, R.uniq, sortNamesAsc)
-    return list(regions)
+    const createList = R.compose(removeNull, R.uniq, sortNamesAsc)
+    return createList(findRegions)
 }
 
 const removeEmptyArrayItems = (data) => {
@@ -22,4 +23,15 @@ const removeEmptyArrayItems = (data) => {
     return R.filter(notEmpty, data)
 }
 
-export {addition, filterByPropsAndValues, findAllUniqueValues, removeEmptyArrayItems}
+const findAllUniqueValuesFlatMap = (data) => {
+    // takes all category items from data and flattens them into single array
+    // this is then sorted alphabetically
+    const filterTags = (x) => x.node && x.node.caseStudyFields && x.node.caseStudyFields.filterTags
+    const cats = R.map(filterTags, data)
+    const result = R.reject(R.equals(null))(R.flatten(cats))
+    const sortNamesAsc = R.sortBy(R.identity)
+    const list = R.compose(R.uniq, sortNamesAsc)
+    return list(result)
+}
+
+export {addition, filterByPropsAndValues, findAllUniqueValues, removeEmptyArrayItems, findAllUniqueValuesFlatMap}
