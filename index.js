@@ -9,4 +9,12 @@ const filterByPropsAndValues = (data, prop, value) => {
     return returned(data)
 }
 
-export {addition, filterByPropsAndValues}
+const findAllUniqueValues = (data) => {
+    const regions = data.map((x) => x.region && x.region.toString())
+    const removeNull = R.reject(R.equals(null))
+    const sortNamesAsc = R.sortBy(R.identity)
+    const list = R.compose(removeNull, R.uniq, sortNamesAsc)
+    return list(regions)
+}
+
+export {addition, filterByPropsAndValues, findAllUniqueValues}

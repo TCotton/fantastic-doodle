@@ -1,4 +1,4 @@
-import {addition, filterByPropsAndValues} from '../index.js'
+import {addition, filterByPropsAndValues, findAllUniqueValues} from '../index.js'
 import {assert, should, expect} from 'chai';
 import {readFile} from 'fs/promises';
 
@@ -35,5 +35,31 @@ describe('filterByPropsAndValues', () => {
         expect(result).not.to.be.undefined;
         assert.typeOf(result, 'array')
         assert.strictEqual(result.length, 0)
+    });
+})
+
+describe('findAllUniqueValues', () => {
+
+    it('should return an array', function () {
+        const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+        expect(result).not.to.be.undefined;
+        assert.typeOf(result, 'array')
+        assert.strictEqual(result.length, 3)
+    });
+
+    it('should return an three different regions', function () {
+        const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+        expect(result).not.to.be.undefined;
+        assert.strictEqual(result.includes('Germany'), true)
+        assert.strictEqual(result.includes('Ireland'), true)
+        assert.strictEqual(result.includes('Spain'), true)
+    });
+
+    it('should return data in alphabetical order', function () {
+        const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+        expect(result).not.to.be.undefined;
+        assert.strictEqual(result[0] === 'Germany', true)
+        assert.strictEqual(result[1] === 'Ireland', true)
+        assert.strictEqual(result[2] === 'Spain', true)
     });
 })
