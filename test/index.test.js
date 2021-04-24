@@ -3,9 +3,10 @@ import {
     filterByPropsAndValues,
     findAllUniqueValues,
     removeEmptyArrayItems,
-    findAllUniqueValuesFlatMap
+    findAllUniqueValuesFlatMap,
+    compareAndFilterTwoArrays,
 } from '../index.js'
-import {assert, should, expect} from 'chai';
+import {assert, expect} from 'chai';
 import {readFile} from 'fs/promises';
 
 const filterByPropsAndValuesDummy = JSON.parse(await readFile(new URL('./dummy/filterByPropsAndValuesData.json', import.meta.url)));
@@ -119,7 +120,6 @@ describe('findAllUniqueValuesFlatMap', () => {
     it('should return an array', function () {
         const result = findAllUniqueValuesFlatMap(findAllUniqueValuesFlatMapData)
         assert.typeOf(result, 'array')
-        assert.strictEqual(result.length, 4)
     });
 
     it('should return an array of four items', function () {
@@ -129,7 +129,6 @@ describe('findAllUniqueValuesFlatMap', () => {
 
     it('should return an four different categories', function () {
         const result = findAllUniqueValuesFlatMap(findAllUniqueValuesFlatMapData)
-        expect(result).not.to.be.undefined;
         assert.strictEqual(result.includes('Hazardous goods'), true)
         assert.strictEqual(result.includes('Pharmaceuticals'), true)
         assert.strictEqual(result.includes('Specialist manufacturing'), true)
@@ -144,3 +143,36 @@ describe('findAllUniqueValuesFlatMap', () => {
         assert.strictEqual(result[3] === 'Temperature control', true)
     });
 })
+
+describe('compareAndFilterTwoArrays', () => {
+
+    const arrayTwo = [
+        'Hazardous goods',
+        'Pharmaceuticals',
+        'Specialist manufacturing',
+        'Temperature control'
+    ]
+
+    it('should return defined', function () {
+        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        expect(result).not.to.be.undefined;
+    });
+
+    it('should return an array', function () {
+        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        assert.typeOf(result, 'array')
+    });
+
+    it('should return an array of seven items', function () {
+        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        assert.strictEqual(result.length, 7)
+    });
+
+    it('should return an array containing all of the items in arrayTwo', function () {
+        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        assert.equal(result[0].node.caseStudyFields.filterTags.toString(), arrayTwo[3])
+        assert.equal(result[1].node.caseStudyFields.filterTags.toString(), arrayTwo[2])
+        assert.equal(result[2].node.caseStudyFields.filterTags.toString(), arrayTwo[1])
+        assert.equal(result[6].node.caseStudyFields.filterTags[0].toString(), arrayTwo[0])
+    });
+});

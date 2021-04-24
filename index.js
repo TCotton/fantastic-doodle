@@ -24,15 +24,25 @@ const removeEmptyArrayItems = (data) => {
 }
 
 const findAllUniqueValuesFlatMap = (data) => {
-    // takes all category items from data and flattens them into single array
-    // this is then sorted alphabetically
     const filterTags = (x) => x.node && x.node.caseStudyFields && x.node.caseStudyFields.filterTags
     const cats = R.map(filterTags, data)
-    const removeNulls = R.compose(R.reject(R.equals(null)), R.flatten)
-    const result = removeNulls(cats)
+    const removeNullFlatten = R.compose(R.reject(R.equals(null)), R.flatten)
+    const result = removeNullFlatten(cats)
     const sortNamesAsc = R.sortBy(R.identity)
     const list = R.compose(R.uniq, sortNamesAsc)
     return list(result)
 }
 
-export {addition, filterByPropsAndValues, findAllUniqueValues, removeEmptyArrayItems, findAllUniqueValuesFlatMap}
+const compareAndFilterTwoArrays = (arrayOne, arrayTwo) => {
+    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
+    return R.filter(fn, arrayOne)
+}
+
+export {
+    addition,
+    filterByPropsAndValues,
+    findAllUniqueValues,
+    removeEmptyArrayItems,
+    findAllUniqueValuesFlatMap,
+    compareAndFilterTwoArrays
+}
