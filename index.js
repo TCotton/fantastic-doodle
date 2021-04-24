@@ -28,7 +28,8 @@ const findAllUniqueValuesFlatMap = (data) => {
     // this is then sorted alphabetically
     const filterTags = (x) => x.node && x.node.caseStudyFields && x.node.caseStudyFields.filterTags
     const cats = R.map(filterTags, data)
-    const result = R.reject(R.equals(null))(R.flatten(cats))
+    const removeNulls = R.compose(R.reject(R.equals(null)), R.flatten)
+    const result = removeNulls(cats)
     const sortNamesAsc = R.sortBy(R.identity)
     const list = R.compose(R.uniq, sortNamesAsc)
     return list(result)
