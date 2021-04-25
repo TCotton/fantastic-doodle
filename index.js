@@ -49,8 +49,8 @@ const sortByDateAsc = (data) => {
 }
 
 const sortDesc = (a, b) => {
-    const dateA = a.publishDate || a.modifiedGmt
-    const dateB = b.publishDate || b.modifiedGmt
+    const dateA = a.modifiedGmt
+    const dateB = b.modifiedGmt
     return new Date(dateB).getTime() - new Date(dateA).getTime()
 }
 

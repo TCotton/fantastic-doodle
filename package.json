@@ -29,10 +29,8 @@
     "babel-plugin-inline-json-import": "0.3.2",
     "chai": "4.3.4",
     "cross-env": "7.0.3",
-    "jasmine": "3.7.0",
     "mocha": "8.3.2",
     "nyc": "15.1.0",
-    "sinon": "10.0.0",
     "testem": "3.4.1"
   },
   "dependencies": {
