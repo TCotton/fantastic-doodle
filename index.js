@@ -1,10 +1,5 @@
 import * as R from 'ramda';
 
-const addition = (x, y) => {
-    if (typeof x !== 'number' && typeof y !== 'number') return null;
-    return x + y;
-}
-
 const filterByPropsAndValues = (data, prop, value) => {
     const returned = R.filter(R.propEq(prop, value))
     return returned(data)
@@ -59,7 +54,6 @@ const sortByDateDesc = (data) => {
 }
 
 export {
-    addition,
     filterByPropsAndValues,
     findAllUniqueValues,
     removeEmptyArrayItems,

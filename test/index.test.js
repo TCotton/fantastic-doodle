@@ -1,5 +1,4 @@
 import {
-    addition,
     filterByPropsAndValues,
     findAllUniqueValues,
     removeEmptyArrayItems,
@@ -14,29 +13,6 @@ import {readFile} from 'fs/promises';
 const filterByPropsAndValuesDummy = JSON.parse(await readFile(new URL('./dummy/filterByPropsAndValuesData.json', import.meta.url)));
 const findAllUniqueValuesFlatMapData = JSON.parse(await readFile(new URL('./dummy/findAllUniqueValuesFlatMapData.json', import.meta.url)));
 const sortByDateDummy = JSON.parse(await readFile(new URL('./dummy/sortByDateDummy.json', import.meta.url)));
-
-describe('addition', () => {
-
-    it('should return defined', function () {
-        const result = addition(7, 8)
-        expect(result).not.to.be.undefined;
-    });
-
-    it('should return a number', function () {
-        const result = addition(7, 8)
-        assert.typeOf(result, 'number')
-    });
-
-    it('adds together two numbers to equal 15', () => {
-        const result = addition(7, 8)
-        assert.strictEqual(result, 15)
-    });
-
-    it('should return null of strings used a params', () => {
-        const result = addition("and", "here")
-        assert.strictEqual(result, null)
-    });
-});
 
 describe('filterByPropsAndValues', () => {
 
