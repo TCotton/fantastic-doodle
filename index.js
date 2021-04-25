@@ -34,9 +34,28 @@ const findAllUniqueValuesFlatMap = (data) => {
 }
 
 const compareAndFilterTwoArrays = (arrayOne, arrayTwo) => {
-
     const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
     return R.filter(fn, arrayOne)
+}
+
+const sortAsc = (a, b) => {
+    const dateA = a.modifiedGmt
+    const dateB = b.modifiedGmt
+    return new Date(dateA).getTime() - new Date(dateB).getTime()
+}
+
+const sortByDateAsc = (data) => {
+    return R.sort(sortAsc, data)
+}
+
+const sortDesc = (a, b) => {
+    const dateA = a.publishDate || a.modifiedGmt
+    const dateB = b.publishDate || b.modifiedGmt
+    return new Date(dateB).getTime() - new Date(dateA).getTime()
+}
+
+const sortByDateDesc = (data) => {
+    return R.sort(sortDesc, data)
 }
 
 export {
@@ -45,5 +64,7 @@ export {
     findAllUniqueValues,
     removeEmptyArrayItems,
     findAllUniqueValuesFlatMap,
-    compareAndFilterTwoArrays
+    compareAndFilterTwoArrays,
+    sortByDateAsc,
+    sortByDateDesc
 }

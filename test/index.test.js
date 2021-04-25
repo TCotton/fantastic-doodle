@@ -5,12 +5,15 @@ import {
     removeEmptyArrayItems,
     findAllUniqueValuesFlatMap,
     compareAndFilterTwoArrays,
+    sortByDateAsc,
+    sortByDateDesc,
 } from '../index.js'
 import {assert, expect} from 'chai';
 import {readFile} from 'fs/promises';
 
 const filterByPropsAndValuesDummy = JSON.parse(await readFile(new URL('./dummy/filterByPropsAndValuesData.json', import.meta.url)));
 const findAllUniqueValuesFlatMapData = JSON.parse(await readFile(new URL('./dummy/findAllUniqueValuesFlatMapData.json', import.meta.url)));
+const sortByDateDummy = JSON.parse(await readFile(new URL('./dummy/sortByDateDummy.json', import.meta.url)));
 
 describe('addition', () => {
 
@@ -176,3 +179,49 @@ describe('compareAndFilterTwoArrays', () => {
         assert.equal(result[6].node.caseStudyFields.filterTags[0].toString(), arrayTwo[0])
     });
 });
+
+describe('sortByDateAsc', () => {
+    it('should return defined', function () {
+        const result = sortByDateAsc(sortByDateDummy)
+        expect(result).not.to.be.undefined;
+    });
+
+    it('should return an array', function () {
+        const result = sortByDateAsc(sortByDateDummy)
+        assert.typeOf(result, 'array')
+    });
+
+    it('should return an array of seven items', function () {
+        const result = sortByDateAsc(sortByDateDummy)
+        assert.strictEqual(result.length, 3)
+    });
+
+    it('should return an array in the correct date order', function () {
+        const result = sortByDateAsc(sortByDateDummy)
+        assert.strictEqual((result[0].modifiedGmt < result[1].modifiedGmt), true)
+        assert.strictEqual((result[1].modifiedGmt < result[2].modifiedGmt), true)
+    });
+})
+
+describe('sortByDateDesc', () => {
+    it('should return defined', function () {
+        const result = sortByDateDesc(sortByDateDummy)
+        expect(result).not.to.be.undefined;
+    });
+
+    it('should return an array', function () {
+        const result = sortByDateDesc(sortByDateDummy)
+        assert.typeOf(result, 'array')
+    });
+
+    it('should return an array of seven items', function () {
+        const result = sortByDateDesc(sortByDateDummy)
+        assert.strictEqual(result.length, 3)
+    });
+
+    it('should return an array in the correct date order', function () {
+        const result = sortByDateDesc(sortByDateDummy)
+        assert.strictEqual((result[0].modifiedGmt > result[1].modifiedGmt), true)
+        assert.strictEqual((result[1].modifiedGmt > result[2].modifiedGmt), true)
+    });
+})
