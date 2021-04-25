@@ -34,6 +34,7 @@ const findAllUniqueValuesFlatMap = (data) => {
 }
 
 const compareAndFilterTwoArrays = (arrayOne, arrayTwo) => {
+
     const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
     return R.filter(fn, arrayOne)
 }
