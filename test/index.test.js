@@ -3,7 +3,7 @@ import {
     findAllUniqueValues,
     removeEmptyArrayItems,
     findAllUniqueValuesFlatMap,
-    compareAndFilterTwoArrays,
+    compareAndFilter_TwoArrays,
     sortByDateAsc,
     sortByDateDesc,
 } from '../index.js'
@@ -123,7 +123,7 @@ describe('findAllUniqueValuesFlatMap', () => {
     });
 })
 
-describe('compareAndFilterTwoArrays', () => {
+describe('compareAndFilter_TwoArrays', () => {
 
     const arrayTwo = [
         'Hazardous goods',
@@ -133,28 +133,39 @@ describe('compareAndFilterTwoArrays', () => {
     ]
 
     it('should return defined', function () {
-        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
         expect(result).not.to.be.undefined;
     });
 
     it('should return an array', function () {
-        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
         assert.typeOf(result, 'array')
     });
 
     it('should return an array of seven items', function () {
-        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
         assert.strictEqual(result.length, 7)
     });
 
     it('should return an array containing all of the items in arrayTwo', function () {
-        const result = compareAndFilterTwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
         assert.equal(result[0].node.caseStudyFields.filterTags.toString(), arrayTwo[3])
         assert.equal(result[1].node.caseStudyFields.filterTags.toString(), arrayTwo[2])
         assert.equal(result[2].node.caseStudyFields.filterTags.toString(), arrayTwo[1])
         assert.equal(result[6].node.caseStudyFields.filterTags[0].toString(), arrayTwo[0])
     });
-});
+
+    it('should return an array of ? containing all if two categories entere', function () {
+     const arrayThree = [
+         'Hazardous goods',
+         'Pharmaceuticals',
+     ]
+     const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayThree);
+     assert.strictEqual(result.length, 4)
+    });
+})
+
+
 
 describe('sortByDateAsc', () => {
     it('should return defined', function () {

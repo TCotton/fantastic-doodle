@@ -28,10 +28,33 @@ const findAllUniqueValuesFlatMap = (data) => {
     return list(result)
 }
 
-const compareAndFilterTwoArrays = (arrayOne, arrayTwo) => {
+const compareAndFilter_TwoArrays = (arrayOne, arrayTwo) => {
+
     const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
-    return R.filter(fn, arrayOne)
+    return R.filter(fn, R.uniq(arrayOne))
+
+/*    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
+    return R.filter(fn, arrayOne)*/
 }
+/*
+  const path = R.where({
+        n: {
+            node: {
+                caseStudyFields: R.where({
+                    filterTags: R.equals(!R.isNil),
+                }),
+            },
+        },
+    });
+
+    const p = R.curry((n) => {
+        return n => arrayTwo.includes(n)
+    });
+
+    const pass = R.any(p);
+    //const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
+    return R.pipe(R.filter, R.propEq("node", {}))(arrayOne)
+ */
 
 const sortAsc = (a, b) => {
     const dateA = a.modifiedGmt
@@ -58,7 +81,7 @@ export {
     findAllUniqueValues,
     removeEmptyArrayItems,
     findAllUniqueValuesFlatMap,
-    compareAndFilterTwoArrays,
+    compareAndFilter_TwoArrays,
     sortByDateAsc,
     sortByDateDesc
 }
