@@ -217,18 +217,18 @@ describe('sortByDateDesc', () => {
 
 describe('changePropValueArrayNestedObject', () => {
     it('should return defined', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy)
+        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         expect(result).not.to.be.undefined;
     });
 
     it('should return defined', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy)
+        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         assert.typeOf(result, 'array')
     });
 
-    it('should return the changed array from one string value to another', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy)
+    it('should return the changed array from one string value (uk) to another (United Kingdom)', function () {
+        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         assert.typeOf(result[0].region, 'array')
-        assert.strictEqual(result[0].region.toString(), 'United Kingdom')
+        assert.strictEqual(result[0].region.toString(), 'uk', 'United Kingdom')
     });
 })

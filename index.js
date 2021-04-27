@@ -28,13 +28,12 @@ const findAllUniqueValuesFlatMap = (data) => {
     return list(result)
 }
 
-const changePropValueArrayNestedObject = (data) => {
-
+const changePropValueArrayNestedObject = (data, find, replace) => {
+    if (!data && !find && !replace) return Error('Please enter all three arguments')
     const transformations = {
-        region: R.adjust(0, R.replace(/uk/, 'United Kingdom'))
+        region: R.adjust(0, R.replace(`/${find}/`, replace))
     };
     const changeUK = R.evolve(transformations);
-
     return R.map(changeUK, data);
 }
 
