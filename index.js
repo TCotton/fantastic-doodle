@@ -28,13 +28,23 @@ const findAllUniqueValuesFlatMap = (data) => {
     return list(result)
 }
 
+const changePropValueArrayNestedObject = (data) => {
+
+    const transformations = {
+        region: R.adjust(0, R.replace(/uk/, 'United Kingdom'))
+    };
+    const changeUK = R.evolve(transformations);
+
+    return R.map(changeUK, data);
+}
+
 const compareAndFilter_TwoArrays = (arrayOne, arrayTwo) => {
 
     const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
     return R.filter(fn, R.uniq(arrayOne))
 
-/*    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
-    return R.filter(fn, arrayOne)*/
+    /*    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
+        return R.filter(fn, arrayOne)*/
 }
 /*
   const path = R.where({
@@ -83,5 +93,6 @@ export {
     findAllUniqueValuesFlatMap,
     compareAndFilter_TwoArrays,
     sortByDateAsc,
-    sortByDateDesc
+    sortByDateDesc,
+    changePropValueArrayNestedObject
 }

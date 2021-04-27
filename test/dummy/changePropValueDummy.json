@@ -1,0 +1,274 @@
+[
+  {
+    "employeeBio": "Manisha is the Finance Assistant in our London-based team, joining Verdion in 2019 to support the financial operations of the business as it continues to grow. Manisha has been working in finance for several years, gaining four years' experience in real estate during this time.",
+    "employeeName": "Manisha Chumber",
+    "jobTitle": "Finance Assistant",
+    "region": [
+      "uk"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+44 20 3814 8221",
+    "email": "chumber@verdion.com",
+    "employeePhoto": {
+      "slug": "manisha-chumber-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Manisha-Chumber-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Manisha-Chumber-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Manisha-Chumber-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Andrew is responsible for the day-to-day corporate financial control and financial operation across Verdion. He is a CIMA member and Chartered Global Management Accountant, and holds a Bachelor of Laws. Andrew qualified as a Chartered Accountant with Waypoint Capital, a Real Estate, Hedge Fund and Private Equity Investment Manager. Andrew joined Verdion from his role as Group FP&A Manager at world-leading travel media company, Ink Global.",
+    "employeeName": "Andrew Dhushantha",
+    "jobTitle": "Financial Controller",
+    "region": [
+      "uk"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+44 20 3814 8221",
+    "email": "dhushantha@verdion.com",
+    "employeePhoto": {
+      "slug": "andrew-dhushanta-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Andrew-Dhushanta-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Andrew-Dhushanta-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Andrew-Dhushanta-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Frank is Verdion’s Business Development Director for the Benelux area, responsible for growing our business in the region. He has longstanding experience in the sector, having worked both as Project Director for various logistics and industrial projects and as Managing Director for construction and installation companies involved in delivering these buildings for clients.",
+    "employeeName": "Frank Drummen",
+    "jobTitle": "Business Development Director Benelux",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 542020",
+    "email": "drummen@verdion.com",
+    "employeePhoto": {
+      "slug": "frank-drummen-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Frank-Drummen-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Frank-Drummen-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Frank-Drummen-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Marc focusses on our investment portfolio and development initiatives, adding value to existing assets and new opportunities through his technical expertise in design, construction and delivery. Since joining us in 2013, Marc has managed complex development projects that include a production site for Siemens in Chemnitz, the new European logistics hub for DeLaval in Gallin, two hazardous goods warehouses for Imperial and a 110,000 sq m distribution centre for Amazon near Dortmund. Before joining Verdion Marc was a technical real estate project manager at the REWE Group.",
+    "employeeName": "Marc Haverkamp",
+    "jobTitle": "Technical Director",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 54 20 20",
+    "email": "haverkamp@verdion.com",
+    "employeePhoto": {
+      "slug": "marc-haverkamp-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marc-Haverkamp-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marc-Haverkamp-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marc-Haverkamp-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Tobias is responsible for the management of our development projects in Germany. His scope of activities runs from the planning process through project management during the construction phase to property management when projects become operational. Before joining Verdion, Tobias worked in structural engineering for Schüßler-Plan in Düsseldorf.",
+    "employeeName": "Tobias Heinz",
+    "jobTitle": "Technical Project Manager",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 54202-121",
+    "email": "heinz@verdion.com",
+    "employeePhoto": {
+      "slug": "tobias-heinz-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Tobias-Heinz-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Tobias-Heinz-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Tobias-Heinz-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Michal is responsible for working closely with our clients in Germany across all aspects of the development process, from design and planning to construction and project management. He has over 25 years’ experience delivering industrial buildings – most recently as a senior project manager for large contractors – with a particular focus on the automotive sector.",
+    "employeeName": "Michal Kaderka",
+    "jobTitle": "Senior Project Manager",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 54 20 20",
+    "email": "kaderka@verdion.com",
+    "employeePhoto": {
+      "slug": "michal-kaderka-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Michal-Kaderka-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Michal-Kaderka-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Michal-Kaderka-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Oliver focusses on identifying, sourcing, analysing, negotiating and executing investment opportunities, transactions, acquisitions, and disposals for Verdion European Logistics Fund 1 (VELF 1). He joined Verdion from KanAm Grund in Frankfurt where he was an Investment Manager, and before that he spent time at Logicor where his focus was value-add logistics investments across Germany. Oliver started his career at JLL.",
+    "employeeName": "Oliver Kemper",
+    "jobTitle": "Senior Investment Manager",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 69 348 758 160",
+    "email": "kemper@verdion.com",
+    "employeePhoto": {
+      "slug": "oliver-kemper-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Oliver-Kemper-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Oliver-Kemper-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Oliver-Kemper-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Marek manages and coordinates our development projects across the UK and Scandinavia. He's responsible for time-schedules, budgets and bills of quantities, quality control and communication with clients. Marek has previously worked for Goodman and Stabil Construction.",
+    "employeeName": "Marek Kubica",
+    "jobTitle": "Technical Director UK & Scandinavia",
+    "region": [
+      "uk"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 542020",
+    "email": "kubica@verdion.com",
+    "employeePhoto": {
+      "slug": "marek-kubica-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marek-Kubica-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marek-Kubica-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marek-Kubica-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Johan leads on our leasing activities in the region, including built to suit and speculative development projects as well as opportunities for the wider Verdion portfolio. Drawing on a strong network across the Nordics, he is responsible for sourcing and delivering new opportunities in the region, primarily in Sweden and Denmark. Before joining Verdion he spent eight years with Prologis in Gothenburg.",
+    "employeeName": "Johan Nihlmark",
+    "jobTitle": "Head of Business Development – Nordics",
+    "region": [
+      "nordics"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": null,
+    "email": "nihlmark@verdion.com",
+    "employeePhoto": {
+      "slug": "johan-nihlmark-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Johan-Nihlmark-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Johan-Nihlmark-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Johan-Nihlmark-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Janine is responsible for the office management of our Düsseldorf office and assists the Asset Management team across Germany and Scandinavia.",
+    "employeeName": "Janine Ogon",
+    "jobTitle": "Office Manager and Assistant to the Asset Management team",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+46 (0)709 30 15 13",
+    "email": "ogon@verdion.com",
+    "employeePhoto": {
+      "slug": "janine-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Janine-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Janine-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Janine-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Marco has worked as a construction and project manager for more than 15 years. Before joining Verdion he worked for GSE Deutschland GmbH, where he was responsible for developing commercial properties with a total GLA of around 70,000 sq m. Before that, he was responsible for projects in Frankfurt and the Netherlands for Goldbeck. Between 2004 and 2014, Marco developed offices, hospitals and schools at Peter Gross Bau GmbH in the Rhine-Main region with a total investment volume of around €150 million.",
+    "employeeName": "Marco Rauch",
+    "jobTitle": "Technical Director Europe",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "49 211 54 20 20",
+    "email": "rauch@verdion.com",
+    "employeePhoto": {
+      "slug": "marco-rauch-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marco-Rauch-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marco-Rauch-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Marco-Rauch-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Anja is Executive Assistant to Michael Hughes, CEO of Verdion. Based in the London office, Anja works closely with the whole Verdion team across London, Düsseldorf and Malmö, helping with development projects as well as overseeing and assisting in all corporate and project-specific PR and marketing activity.",
+    "employeeName": "Anja Schnarre",
+    "jobTitle": "Executive Assistant to Michael Hughes - CEO",
+    "region": [
+      "uk"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "44 20 3814 8221",
+    "email": "schnarre@verdion.com",
+    "employeePhoto": {
+      "slug": "anja-schnarre-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Anja-Schnarre-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Anja-Schnarre-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Anja-Schnarre-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Valerie manages Verdion’s assets across Germany, the Nordics, Benelux and the Czech Republic, from incorporating new assets into the firm’s portfolio to day-to-day business planning, management and reporting. As part of this she undertakes rent reviews, lease renewals and regears and oversees larger capital projects. She joined the firm from VGP where she was a property manager, and prior to that worked for Postcon Service GmbH.",
+    "employeeName": "Valerie Setz",
+    "jobTitle": "Asset Manager",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 211 542020",
+    "email": "setz@verdion.com",
+    "employeePhoto": {
+      "slug": "valerie-setz-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Valerie-Setz-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Valerie-Setz-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Valerie-Setz-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Bjørn is Senior Technical Manager for Verdion across the Nordics with responsibility for all technical development matters, including design, planning, construction and project management.  He has over 40 years’ experience as a project director, managing construction in Denmark and internationally with a focus on infrastructure, civil, and building. Bjørn is based in Denmark and is fluent in Danish, Swedish, English.",
+    "employeeName": "Bjørn Steffanson",
+    "jobTitle": "Senior Project Manager – Nordics",
+    "region": [
+      "nordics"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+45 51 37 60 56",
+    "email": "stefansson@verdion.com",
+    "employeePhoto": {
+      "slug": "bjorn-steffanson-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Bjorn-Steffanson-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Bjorn-Steffanson-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Bjorn-Steffanson-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Florian leads Verdion’s investment activity in Germany. Previously Senior Investment Manager – Logistics at Deka, he has more than 15 years’ experience in the industrial and logistics sector and a strong track record in sourcing and acquiring assets for value-add strategies. He sits on Verdion’s investment committee and works closely with the firm’s development, asset management and technical specialists in Germany as part of his role.",
+    "employeeName": "Florian Stöbe",
+    "jobTitle": "Head of Investment – Germany",
+    "region": [
+      "germany"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+49 69 348 758 160",
+    "email": "stoebe@verdion.com",
+    "employeePhoto": {
+      "slug": "florian-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Florian-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Florian-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Florian-1-235x300.png 235w",
+      "title": null
+    }
+  },
+  {
+    "employeeBio": "Peter Michael leads Verdion’s investment activity across the Nordics. He sits on the firm’s Investment Committee and is responsible for identifying and acquiring investment opportunities and overseeing the execution of associated leasing and development activities in the region. He joined Verdion following several years with CBRE’s Capital Markets Team in Copenhagen.",
+    "employeeName": "Peter Michael Tetzlaff",
+    "jobTitle": "Head of Investment – Nordics",
+    "region": [
+      "nordics"
+    ],
+    "seniority": "management-team",
+    "phoneNumber": "+45 (0)2166 2080",
+    "email": "tetzlaff@verdion.com",
+    "employeePhoto": {
+      "slug": "peter-michael-tetzlaff-2",
+      "sourceUrl": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Peter-Michael-Tetzlaff-1.png",
+      "srcSet": "https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Peter-Michael-Tetzlaff-1.png 588w, https://verdion.pollittandpartners.com/wp-content/uploads/2021/04/Peter-Michael-Tetzlaff-1-235x300.png 235w",
+      "title": null
+    }
+  }
+]

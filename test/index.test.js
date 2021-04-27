@@ -6,6 +6,7 @@ import {
     compareAndFilter_TwoArrays,
     sortByDateAsc,
     sortByDateDesc,
+    changePropValueArrayNestedObject,
 } from '../index.js'
 import {assert, expect} from 'chai';
 import {readFile} from 'fs/promises';
@@ -13,6 +14,7 @@ import {readFile} from 'fs/promises';
 const filterByPropsAndValuesDummy = JSON.parse(await readFile(new URL('./dummy/filterByPropsAndValuesData.json', import.meta.url)));
 const findAllUniqueValuesFlatMapData = JSON.parse(await readFile(new URL('./dummy/findAllUniqueValuesFlatMapData.json', import.meta.url)));
 const sortByDateDummy = JSON.parse(await readFile(new URL('./dummy/sortByDateDummy.json', import.meta.url)));
+const changePropValueDummy = JSON.parse(await readFile(new URL('./dummy/changePropValueDummy.json', import.meta.url)));
 
 describe('filterByPropsAndValues', () => {
 
@@ -210,5 +212,23 @@ describe('sortByDateDesc', () => {
         const result = sortByDateDesc(sortByDateDummy)
         assert.strictEqual((result[0].modifiedGmt > result[1].modifiedGmt), true)
         assert.strictEqual((result[1].modifiedGmt > result[2].modifiedGmt), true)
+    });
+})
+
+describe('changePropValueArrayNestedObject', () => {
+    it('should return defined', function () {
+        const result = changePropValueArrayNestedObject(changePropValueDummy)
+        expect(result).not.to.be.undefined;
+    });
+
+    it('should return defined', function () {
+        const result = changePropValueArrayNestedObject(changePropValueDummy)
+        assert.typeOf(result, 'array')
+    });
+
+    it('should return the changed array from one string value to another', function () {
+        const result = changePropValueArrayNestedObject(changePropValueDummy)
+        assert.typeOf(result[0].region, 'array')
+        assert.strictEqual(result[0].region.toString(), 'United Kingdom')
     });
 })
