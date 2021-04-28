@@ -81,9 +81,7 @@
             "statTitle": "Completion"
           }
         ],
-        "filterTags": [
-          "Temperature control"
-        ]
+        "filterTags": ["Temperature control"]
       }
     }
   },
@@ -305,9 +303,7 @@
             "statTitle": "Awards"
           }
         ],
-        "filterTags": [
-          "Specialist manufacturing"
-        ]
+        "filterTags": ["Specialist manufacturing"]
       }
     }
   },
@@ -408,9 +404,7 @@
             "statTitle": "Awards and certifications"
           }
         ],
-        "filterTags": [
-          "Pharmaceuticals"
-        ]
+        "filterTags": ["Pharmaceuticals"]
       }
     }
   },
@@ -511,9 +505,7 @@
             "statTitle": "Awards and Certificates"
           }
         ],
-        "filterTags": [
-          "Specialist manufacturing"
-        ]
+        "filterTags": ["Specialist manufacturing"]
       }
     }
   },
@@ -614,10 +606,7 @@
             "statTitle": "Completion"
           }
         ],
-        "filterTags": [
-          "Temperature control",
-          "Pharmaceuticals"
-        ]
+        "filterTags": ["Temperature control", "Pharmaceuticals"]
       }
     }
   },
@@ -828,10 +817,7 @@
             "statTitle": "Awards and certifications"
           }
         ],
-        "filterTags": [
-          "Hazardous goods",
-          "Specialist manufacturing"
-        ]
+        "filterTags": ["Hazardous goods", "Specialist manufacturing"]
       }
     }
   },

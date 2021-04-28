@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "spec": "cross-env mocha --require @babel/register --reporter spec",
-    "test": "npm run spec"
+    "test": "npm run spec",
+    "format": "prettier-standard --format"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,8 @@
     "cross-env": "7.0.3",
     "mocha": "8.3.2",
     "nyc": "15.1.0",
+    "prettier-standard": "16.4.1",
+    "standard": "16.0.3",
     "testem": "3.4.1"
   },
   "dependencies": {
