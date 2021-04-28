@@ -125,42 +125,7 @@ describe('findAllUniqueValuesFlatMap', () => {
     });
 })
 
-const arrayOne = [
-    {
-        node: {
-            caseStudyFields: {
-                filterTags: [
-                    "Temperature control"
-                ]
-            }
-        }
-    },
-    {
-        node: {
-            caseStudyFields: {
-                filterTags: null
-            }
-        }
-    },
-    {
-        node: {
-            caseStudyFields: {
-                filterTags: [
-                    "Specialist manufacturing",
-                    "Pharmaceuticals"
-                ]
-            }
-        }
-    },
-]
-const arrayTwo = [
-    'Pharmaceuticals',
-    'Specialist manufacturing',
-    'Temperature control'
-]
-
 describe('compareAndFilter_TwoArrays', () => {
-
     const arrayOne = [
         {
             node: {
