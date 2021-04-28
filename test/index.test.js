@@ -6,7 +6,7 @@ import {
     compareAndFilter_TwoArrays,
     sortByDateAsc,
     sortByDateDesc,
-    changePropValueArrayNestedObject,
+    changePropArrayValueFromNestedObject,
 } from '../index.js'
 import {assert, expect} from 'chai';
 import {readFile} from 'fs/promises';
@@ -125,8 +125,125 @@ describe('findAllUniqueValuesFlatMap', () => {
     });
 })
 
+const arrayOne = [
+    {
+        node: {
+            caseStudyFields: {
+                filterTags: [
+                    "Temperature control"
+                ]
+            }
+        }
+    },
+    {
+        node: {
+            caseStudyFields: {
+                filterTags: null
+            }
+        }
+    },
+    {
+        node: {
+            caseStudyFields: {
+                filterTags: [
+                    "Specialist manufacturing",
+                    "Pharmaceuticals"
+                ]
+            }
+        }
+    },
+]
+const arrayTwo = [
+    'Pharmaceuticals',
+    'Specialist manufacturing',
+    'Temperature control'
+]
+
 describe('compareAndFilter_TwoArrays', () => {
 
+    const arrayOne = [
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Temperature control"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: null
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Specialist manufacturing"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Pharmaceuticals"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Specialist manufacturing"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Temperature control",
+                        "Pharmaceuticals"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Hazardous goods",
+                        "Pharmaceuticals",
+                        "Specialist manufacturing"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: [
+                        "Hazardous goods",
+                        "Specialist manufacturing"
+                    ]
+                }
+            }
+        },
+        {
+            node: {
+                caseStudyFields: {
+                    filterTags: null
+                }
+            }
+        }
+    ]
     const arrayTwo = [
         'Hazardous goods',
         'Pharmaceuticals',
@@ -135,38 +252,37 @@ describe('compareAndFilter_TwoArrays', () => {
     ]
 
     it('should return defined', function () {
-        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo);
         expect(result).not.to.be.undefined;
     });
 
     it('should return an array', function () {
-        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo);
         assert.typeOf(result, 'array')
     });
 
     it('should return an array of seven items', function () {
-        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo);
         assert.strictEqual(result.length, 7)
     });
 
     it('should return an array containing all of the items in arrayTwo', function () {
-        const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayTwo);
+        const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo);
         assert.equal(result[0].node.caseStudyFields.filterTags.toString(), arrayTwo[3])
         assert.equal(result[1].node.caseStudyFields.filterTags.toString(), arrayTwo[2])
         assert.equal(result[2].node.caseStudyFields.filterTags.toString(), arrayTwo[1])
         assert.equal(result[6].node.caseStudyFields.filterTags[0].toString(), arrayTwo[0])
     });
 
-    it('should return an array of ? containing all if two categories entere', function () {
-     const arrayThree = [
-         'Hazardous goods',
-         'Pharmaceuticals',
-     ]
-     const result = compareAndFilter_TwoArrays(findAllUniqueValuesFlatMapData, arrayThree);
-     assert.strictEqual(result.length, 4)
+    it('should return an array of 4 containing all if two categories', function () {
+        const arrayThree = [
+            'Hazardous goods',
+            'Pharmaceuticals',
+        ]
+        const result = compareAndFilter_TwoArrays(arrayOne, arrayThree);
+        assert.strictEqual(result.length, 4)
     });
 })
-
 
 
 describe('sortByDateAsc', () => {
@@ -217,17 +333,17 @@ describe('sortByDateDesc', () => {
 
 describe('changePropValueArrayNestedObject', () => {
     it('should return defined', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
+        const result = changePropArrayValueFromNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         expect(result).not.to.be.undefined;
     });
 
     it('should return defined', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
+        const result = changePropArrayValueFromNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         assert.typeOf(result, 'array')
     });
 
     it('should return the changed array from one string value (uk) to another (United Kingdom)', function () {
-        const result = changePropValueArrayNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
+        const result = changePropArrayValueFromNestedObject(changePropValueDummy, 'uk', 'United Kingdom')
         assert.typeOf(result[0].region, 'array')
         assert.strictEqual(result[0].region.toString(), 'uk', 'United Kingdom')
     });

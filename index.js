@@ -28,7 +28,7 @@ const findAllUniqueValuesFlatMap = (data) => {
     return list(result)
 }
 
-const changePropValueArrayNestedObject = (data, find, replace) => {
+const changePropArrayValueFromNestedObject = (data, find, replace) => {
     if (!data && !find && !replace) return Error('Please enter all three arguments')
     const transformations = {
         region: R.adjust(0, R.replace(`/${find}/`, replace))
@@ -37,33 +37,17 @@ const changePropValueArrayNestedObject = (data, find, replace) => {
     return R.map(changeUK, data);
 }
 
-const compareAndFilter_TwoArrays = (arrayOne, arrayTwo) => {
+const compareAndFilter_TwoArrays = (arr, tags) => {
 
-    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
-    return R.filter(fn, R.uniq(arrayOne))
+    const filterByTags = R.curry((tags, arr) =>
+        R.filter(
+            R.pipe(
+            R.pathOr([], ['node', 'caseStudyFields', 'filterTags']),
+            R.any(R.includes(R.__, tags))
+        ))(arr))
 
-    /*    const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
-        return R.filter(fn, arrayOne)*/
+    return filterByTags(tags, arr)
 }
-/*
-  const path = R.where({
-        n: {
-            node: {
-                caseStudyFields: R.where({
-                    filterTags: R.equals(!R.isNil),
-                }),
-            },
-        },
-    });
-
-    const p = R.curry((n) => {
-        return n => arrayTwo.includes(n)
-    });
-
-    const pass = R.any(p);
-    //const fn = n => n.node.caseStudyFields.filterTags && n.node.caseStudyFields.filterTags.some(r => arrayTwo.includes(r))
-    return R.pipe(R.filter, R.propEq("node", {}))(arrayOne)
- */
 
 const sortAsc = (a, b) => {
     const dateA = a.modifiedGmt
@@ -93,5 +77,5 @@ export {
     compareAndFilter_TwoArrays,
     sortByDateAsc,
     sortByDateDesc,
-    changePropValueArrayNestedObject
+    changePropArrayValueFromNestedObject
 }
