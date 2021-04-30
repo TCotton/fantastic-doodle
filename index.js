@@ -72,7 +72,18 @@ const sortByDateDesc = data => {
   return R.sort(sortDesc, data)
 }
 
+export const sortBool = (a, b) => {
+  const getNodeAFeatured = R.pathOr(false, ['node','newsAndViewpoint', 'featured'], a)
+  const getNodeBFeatured = R.pathOr(false, ['node','newsAndViewpoint', 'featured'], b)
+  return getNodeBFeatured - getNodeAFeatured
+}
+
+const sortByBoolean = (data) => {
+  return R.sort(sortBool, data)
+}
+
 export {
+  sortByBoolean,
   filterByPropsAndValues,
   findAllUniqueValues,
   removeEmptyArrayItems,

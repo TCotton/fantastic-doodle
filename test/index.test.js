@@ -6,7 +6,8 @@ import {
   compareAndFilter_TwoArrays,
   sortByDateAsc,
   sortByDateDesc,
-  changePropArrayValueFromNestedObject
+  changePropArrayValueFromNestedObject,
+  sortByBoolean
 } from '../index.js'
 import { assert, expect } from 'chai'
 import { readFile } from 'fs/promises'
@@ -26,6 +27,9 @@ const sortByDateDummy = JSON.parse(
 )
 const changePropValueDummy = JSON.parse(
   await readFile(new URL('./dummy/changePropValueDummy.json', import.meta.url))
+)
+const sortByBooleanDummy = JSON.parse(
+  await readFile(new URL('./dummy/sortByBooleanDummy.json', import.meta.url))
 )
 
 describe('filterByPropsAndValues', () => {
@@ -341,5 +345,35 @@ describe('changePropValueArrayNestedObject', () => {
     )
     assert.typeOf(result[0].region, 'array')
     assert.strictEqual(result[0].region.toString(), 'uk', 'United Kingdom')
+  })
+})
+
+describe('sortByDataDummy', () => {
+  it('should return defined', function () {
+    const result = sortByBoolean(sortByBooleanDummy)
+    expect(result).not.to.be.undefined
+  })
+
+  it('should return an array', function () {
+    const result = sortByBoolean(sortByBooleanDummy)
+    assert.typeOf(result, 'array')
+  })
+
+  it('should return an array', function () {
+    const result = sortByBoolean(sortByBooleanDummy)
+    assert.typeOf(result, 'array')
+  })
+
+  it('should return an array of 50 items', function () {
+    const result = sortByBoolean(sortByBooleanDummy)
+    assert.strictEqual(result.length, 3)
+  })
+
+  it('should return boolean true at top of list', function () {
+    const result = sortByBoolean(sortByBooleanDummy)
+    assert.strictEqual(result[0].node.caseStudyFields.featured, true)
+    assert.strictEqual(result[1].node.caseStudyFields.featured, true)
+    assert.strictEqual(result[2].node.caseStudyFields.featured, false)
+    assert.strictEqual(result[3].node.caseStudyFields.featured, false)
   })
 })
