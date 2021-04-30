@@ -5,7 +5,7 @@ import * as R from 'ramda'
  * @param {array} data
  * @param {string} prop
  * @param {string} value
- * @returns {function}
+ * @returns {array}
  */
 const filterByPropsAndValues = (data, prop, value) => {
   const returned = R.filter(R.propEq(prop, value))
@@ -16,7 +16,7 @@ const filterByPropsAndValues = (data, prop, value) => {
  * @function
  * @description findAllUniqueValues
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const findAllUniqueValues = data => {
@@ -31,7 +31,7 @@ const findAllUniqueValues = data => {
  * @function
  * @description removeEmptyArrayItems
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const removeEmptyArrayItems = data => {
@@ -43,7 +43,7 @@ const removeEmptyArrayItems = data => {
  * @function
  * @description findAllUniqueValuesFlatMap
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const findAllUniqueValuesFlatMap = data => {
@@ -63,7 +63,7 @@ const findAllUniqueValuesFlatMap = data => {
  * @param {array} data
  * @param {string} find
  * @param {string} replace
- * @returns {function}
+ * @returns {array}
  */
 
 const changePropArrayValueFromNestedObject = (data, find, replace) => {
@@ -81,7 +81,7 @@ const changePropArrayValueFromNestedObject = (data, find, replace) => {
  * @description sortAsc
  * @param {array} arr
  * @param {array} tags
- * @returns {function}
+ * @returns {array}
  */
 
 const compareAndFilter_TwoArrays = (arr, tags) => {
@@ -107,7 +107,7 @@ const sortAsc = (a, b) => {
  * @function
  * @description sortByDateAsc
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const sortByDateAsc = data => {
@@ -124,7 +124,7 @@ const sortDesc = (a, b) => {
  * @function
  * @description sortByDateDesc
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const sortByDateDesc = data => {
@@ -141,7 +141,7 @@ export const sortBool = (a, b) => {
  * @function
  * @description sortByBoolean
  * @param {array} data
- * @returns {function}
+ * @returns {array}
  */
 
 const sortByBoolean = (data) => {

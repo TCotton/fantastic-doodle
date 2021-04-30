@@ -5,38 +5,38 @@ Ramda js snippets
 ## Functions
 
 <dl>
-<dt><a href="#filterByPropsAndValues">filterByPropsAndValues(data, prop, value)</a> ⇒ <code>function</code></dt>
+<dt><a href="#filterByPropsAndValues">filterByPropsAndValues(data, prop, value)</a> ⇒ <code>array</code></dt>
 <dd><p>filterByPropsAndValues</p>
 </dd>
-<dt><a href="#findAllUniqueValues">findAllUniqueValues(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#findAllUniqueValues">findAllUniqueValues(data)</a> ⇒ <code>array</code></dt>
 <dd><p>findAllUniqueValues</p>
 </dd>
-<dt><a href="#removeEmptyArrayItems">removeEmptyArrayItems(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#removeEmptyArrayItems">removeEmptyArrayItems(data)</a> ⇒ <code>array</code></dt>
 <dd><p>removeEmptyArrayItems</p>
 </dd>
-<dt><a href="#findAllUniqueValuesFlatMap">findAllUniqueValuesFlatMap(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#findAllUniqueValuesFlatMap">findAllUniqueValuesFlatMap(data)</a> ⇒ <code>array</code></dt>
 <dd><p>findAllUniqueValuesFlatMap</p>
 </dd>
-<dt><a href="#changePropArrayValueFromNestedObject">changePropArrayValueFromNestedObject(data, find, replace)</a> ⇒ <code>function</code></dt>
+<dt><a href="#changePropArrayValueFromNestedObject">changePropArrayValueFromNestedObject(data, find, replace)</a> ⇒ <code>array</code></dt>
 <dd><p>changePropArrayValueFromNestedObject</p>
 </dd>
-<dt><a href="#compareAndFilter_TwoArrays">compareAndFilter_TwoArrays(arr, tags)</a> ⇒ <code>function</code></dt>
+<dt><a href="#compareAndFilter_TwoArrays">compareAndFilter_TwoArrays(arr, tags)</a> ⇒ <code>array</code></dt>
 <dd><p>sortAsc</p>
 </dd>
-<dt><a href="#sortByDateAsc">sortByDateAsc(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#sortByDateAsc">sortByDateAsc(data)</a> ⇒ <code>array</code></dt>
 <dd><p>sortByDateAsc</p>
 </dd>
-<dt><a href="#sortByDateDesc">sortByDateDesc(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#sortByDateDesc">sortByDateDesc(data)</a> ⇒ <code>array</code></dt>
 <dd><p>sortByDateDesc</p>
 </dd>
-<dt><a href="#sortByBoolean">sortByBoolean(data)</a> ⇒ <code>function</code></dt>
+<dt><a href="#sortByBoolean">sortByBoolean(data)</a> ⇒ <code>array</code></dt>
 <dd><p>sortByBoolean</p>
 </dd>
 </dl>
 
 <a name="filterByPropsAndValues"></a>
 
-## filterByPropsAndValues(data, prop, value) ⇒ <code>function</code>
+## filterByPropsAndValues(data, prop, value) ⇒ <code>array</code>
 filterByPropsAndValues
 
 **Kind**: global function
@@ -49,7 +49,7 @@ filterByPropsAndValues
 
 <a name="findAllUniqueValues"></a>
 
-## findAllUniqueValues(data) ⇒ <code>function</code>
+## findAllUniqueValues(data) ⇒ <code>array</code>
 findAllUniqueValues
 
 **Kind**: global function
@@ -60,7 +60,7 @@ findAllUniqueValues
 
 <a name="removeEmptyArrayItems"></a>
 
-## removeEmptyArrayItems(data) ⇒ <code>function</code>
+## removeEmptyArrayItems(data) ⇒ <code>array</code>
 removeEmptyArrayItems
 
 **Kind**: global function
@@ -71,7 +71,7 @@ removeEmptyArrayItems
 
 <a name="findAllUniqueValuesFlatMap"></a>
 
-## findAllUniqueValuesFlatMap(data) ⇒ <code>function</code>
+## findAllUniqueValuesFlatMap(data) ⇒ <code>array</code>
 findAllUniqueValuesFlatMap
 
 **Kind**: global function
@@ -82,7 +82,7 @@ findAllUniqueValuesFlatMap
 
 <a name="changePropArrayValueFromNestedObject"></a>
 
-## changePropArrayValueFromNestedObject(data, find, replace) ⇒ <code>function</code>
+## changePropArrayValueFromNestedObject(data, find, replace) ⇒ <code>array</code>
 changePropArrayValueFromNestedObject
 
 **Kind**: global function
@@ -95,7 +95,7 @@ changePropArrayValueFromNestedObject
 
 <a name="compareAndFilter_TwoArrays"></a>
 
-## compareAndFilter\_TwoArrays(arr, tags) ⇒ <code>function</code>
+## compareAndFilter\_TwoArrays(arr, tags) ⇒ <code>array</code>
 sortAsc
 
 **Kind**: global function
@@ -107,7 +107,7 @@ sortAsc
 
 <a name="sortByDateAsc"></a>
 
-## sortByDateAsc(data) ⇒ <code>function</code>
+## sortByDateAsc(data) ⇒ <code>array</code>
 sortByDateAsc
 
 **Kind**: global function
@@ -118,7 +118,7 @@ sortByDateAsc
 
 <a name="sortByDateDesc"></a>
 
-## sortByDateDesc(data) ⇒ <code>function</code>
+## sortByDateDesc(data) ⇒ <code>array</code>
 sortByDateDesc
 
 **Kind**: global function
@@ -129,7 +129,7 @@ sortByDateDesc
 
 <a name="sortByBoolean"></a>
 
-## sortByBoolean(data) ⇒ <code>function</code>
+## sortByBoolean(data) ⇒ <code>array</code>
 sortByBoolean
 
 **Kind**: global function
