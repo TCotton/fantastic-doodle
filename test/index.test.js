@@ -366,14 +366,14 @@ describe('sortByDataDummy', () => {
 
   it('should return an array of 50 items', function () {
     const result = sortByBoolean(sortByBooleanDummy)
-    assert.strictEqual(result.length, 3)
+    assert.strictEqual(result.length, 50)
   })
 
   it('should return boolean true at top of list', function () {
     const result = sortByBoolean(sortByBooleanDummy)
-    assert.strictEqual(result[0].node.caseStudyFields.featured, true)
-    assert.strictEqual(result[1].node.caseStudyFields.featured, true)
-    assert.strictEqual(result[2].node.caseStudyFields.featured, false)
-    assert.strictEqual(result[3].node.caseStudyFields.featured, false)
+    assert.strictEqual(result[0].node.newsAndViewpoint.featured, true)
+    assert.strictEqual(result[1].node.newsAndViewpoint.featured, true)
+    assert.strictEqual(result[2].node.newsAndViewpoint.featured, null)
+    assert.strictEqual(result[3].node.newsAndViewpoint.featured, null)
   })
 })
