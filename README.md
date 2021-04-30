@@ -1,6 +1,8 @@
 # fantastic doodle
 
-Ramda js snippets
+Fully testing pure functions using Ramda.js
+
+These serve as examples of using Ramda.js in projects
 
 ## Functions
 
