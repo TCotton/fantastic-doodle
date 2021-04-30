@@ -75,6 +75,7 @@ describe('filterByPropsAndValues', () => {
 describe('findAllUniqueValues', () => {
   it('should return defined', function () {
     const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+    console.log(result)
     expect(result).not.to.be.undefined
   })
 
