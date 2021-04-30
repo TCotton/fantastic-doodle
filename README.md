@@ -5,7 +5,7 @@ Ramda js snippets
 ## Functions
 
 <dl>
-<dt><a href="#filterByPropsAndValues">filterByPropsAndValues(data, prop, value)</a> ⇒ <code>array</code></dt>
+<dt><a href="#filterByPropsAndValues">filterByPropsAndValues(data, prop, value)</a> ⇒ <code>array</code> | <code>Error</code></dt>
 <dd><p>filterByPropsAndValues</p>
 </dd>
 <dt><a href="#findAllUniqueValues">findAllUniqueValues(data)</a> ⇒ <code>array</code></dt>
@@ -17,11 +17,11 @@ Ramda js snippets
 <dt><a href="#findAllUniqueValuesFlatMap">findAllUniqueValuesFlatMap(data)</a> ⇒ <code>array</code></dt>
 <dd><p>findAllUniqueValuesFlatMap</p>
 </dd>
-<dt><a href="#changePropArrayValueFromNestedObject">changePropArrayValueFromNestedObject(data, find, replace)</a> ⇒ <code>array</code></dt>
+<dt><a href="#changePropArrayValueFromNestedObject">changePropArrayValueFromNestedObject(data, find, replace)</a> ⇒ <code>array</code> | <code>Error</code></dt>
 <dd><p>changePropArrayValueFromNestedObject</p>
 </dd>
 <dt><a href="#compareAndFilter_TwoArrays">compareAndFilter_TwoArrays(arr, tags)</a> ⇒ <code>array</code></dt>
-<dd><p>sortAsc</p>
+<dd><p>compareAndFilter_TwoArrays</p>
 </dd>
 <dt><a href="#sortByDateAsc">sortByDateAsc(data)</a> ⇒ <code>array</code></dt>
 <dd><p>sortByDateAsc</p>
@@ -36,7 +36,7 @@ Ramda js snippets
 
 <a name="filterByPropsAndValues"></a>
 
-## filterByPropsAndValues(data, prop, value) ⇒ <code>array</code>
+## filterByPropsAndValues(data, prop, value) ⇒ <code>array</code> \| <code>Error</code>
 filterByPropsAndValues
 
 **Kind**: global function
@@ -82,7 +82,7 @@ findAllUniqueValuesFlatMap
 
 <a name="changePropArrayValueFromNestedObject"></a>
 
-## changePropArrayValueFromNestedObject(data, find, replace) ⇒ <code>array</code>
+## changePropArrayValueFromNestedObject(data, find, replace) ⇒ <code>array</code> \| <code>Error</code>
 changePropArrayValueFromNestedObject
 
 **Kind**: global function
@@ -96,7 +96,7 @@ changePropArrayValueFromNestedObject
 <a name="compareAndFilter_TwoArrays"></a>
 
 ## compareAndFilter\_TwoArrays(arr, tags) ⇒ <code>array</code>
-sortAsc
+compareAndFilter_TwoArrays
 
 **Kind**: global function
 

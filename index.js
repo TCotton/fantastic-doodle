@@ -5,9 +5,11 @@ import * as R from 'ramda'
  * @param {array} data
  * @param {string} prop
  * @param {string} value
- * @returns {array}
+ * @returns {array | Error}
  */
 const filterByPropsAndValues = (data, prop, value) => {
+  if (!data && !prop && !value)
+    return Error('Please enter all three arguments')
   const returned = R.filter(R.propEq(prop, value))
   return returned(data)
 }
@@ -63,7 +65,7 @@ const findAllUniqueValuesFlatMap = data => {
  * @param {array} data
  * @param {string} find
  * @param {string} replace
- * @returns {array}
+ * @returns {array | Error}
  */
 
 const changePropArrayValueFromNestedObject = (data, find, replace) => {
@@ -78,7 +80,7 @@ const changePropArrayValueFromNestedObject = (data, find, replace) => {
 
 /**
  * @function
- * @description sortAsc
+ * @description compareAndFilter_TwoArrays
  * @param {array} arr
  * @param {array} tags
  * @returns {array}
