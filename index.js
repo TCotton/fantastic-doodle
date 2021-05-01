@@ -29,6 +29,7 @@ const compareAndFilter_TwoArrays = (arr, tags) => {
  * @param {string} value
  * @returns {array}
  */
+
 const filterByPropsAndValues = (data, prop, value) => {
   const returned = R.filter(R.propEq(prop, value))
   return returned(data)
@@ -47,7 +48,6 @@ const findAllUniqueValues = data => {
     R.pluck('region'),
     R.flatten
   )(data)
-
   const removeNull = R.reject(R.equals(null))
   const sortNamesAsc = R.sortBy(R.identity)
   const createList = R.compose(removeNull, R.uniq, sortNamesAsc)
@@ -74,11 +74,11 @@ const removeEmptyArrayItems = data => {
  */
 
 const findAllUniqueValuesFlatMap = data => {
-  const cats = R.map(
+  const mapTags = R.map(
     R.path(['node', 'caseStudyFields', 'filterTags']),
   )(data)
   const removeNullFlatten = R.compose(R.reject(R.equals(null)), R.flatten)
-  const result = removeNullFlatten(cats)
+  const result = removeNullFlatten(mapTags)
   const sortNamesAsc = R.sortBy(R.identity)
   const list = R.compose(R.uniq, sortNamesAsc)
   return list(result)
