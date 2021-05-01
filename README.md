@@ -2,7 +2,9 @@
 
 Ramda.js snippets
 
-Real world, tested functions that utilise Ramda.js
+Real world, tested pure functions that utilise Ramda.js
+
+The functions are intentionally readable. Always read the accompanying test
 
 ## Functions
 
