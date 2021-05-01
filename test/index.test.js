@@ -3,7 +3,7 @@ import {
   findAllUniqueValues,
   removeEmptyArrayItems,
   findAllUniqueValuesFlatMap,
-  compareAndFilter_TwoArrays,
+  compareAndFilter_twoArrays,
   sortByDateAsc,
   sortByDateDesc,
   changePropArrayValueFromNestedObject,
@@ -12,11 +12,6 @@ import {
 import { assert, expect } from 'chai'
 import { readFile } from 'fs/promises'
 
-const filterByPropsAndValuesDummy = JSON.parse(
-  await readFile(
-    new URL('./dummy/filterByPropsAndValuesData.json', import.meta.url)
-  )
-)
 const findAllUniqueValuesFlatMapData = JSON.parse(
   await readFile(
     new URL('./dummy/findAllUniqueValuesFlatMapData.json', import.meta.url)
@@ -32,10 +27,19 @@ const sortByBooleanDummy = JSON.parse(
   await readFile(new URL('./dummy/sortByBooleanDummy.json', import.meta.url))
 )
 
+const filterArr = [
+  {
+    "seniority": "management-team",
+  },
+  {
+    "seniority": "executive",
+  },
+]
+
 describe('filterByPropsAndValues', () => {
   it('should return defined', function () {
     const result = filterByPropsAndValues(
-      filterByPropsAndValuesDummy,
+      filterArr,
       'seniority',
       'management-team'
     )
@@ -44,7 +48,7 @@ describe('filterByPropsAndValues', () => {
 
   it('should return an array', function () {
     const result = filterByPropsAndValues(
-      filterByPropsAndValuesDummy,
+      filterArr,
       'seniority',
       'management-team'
     )
@@ -54,16 +58,16 @@ describe('filterByPropsAndValues', () => {
 
   it('should return an array of 16 items', function () {
     const result = filterByPropsAndValues(
-      filterByPropsAndValuesDummy,
+      filterArr,
       'seniority',
       'management-team'
     )
-    assert.strictEqual(result.length, 16)
+    assert.strictEqual(result.length, 1)
   })
 
   it('should return an empty array if different property value passed as arguments', function () {
     const result = filterByPropsAndValues(
-      filterByPropsAndValuesDummy,
+      filterArr,
       'seniority',
       'executive-board'
     )
@@ -72,35 +76,80 @@ describe('filterByPropsAndValues', () => {
   })
 })
 
+const filterArrTwo = [
+  {
+    "region": ["nordics"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["uk"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["nordics"],
+  },
+  {
+    "region": ["uk"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["germany"],
+  },
+  {
+    "region": ["uk"],
+  },
+  {
+    "region": ["uk"],
+  }
+]
+
 describe('findAllUniqueValues', () => {
   it('should return defined', function () {
-    const result = findAllUniqueValues(filterByPropsAndValuesDummy)
-    console.log(result)
+    const result = findAllUniqueValues(filterArrTwo)
     expect(result).not.to.be.undefined
   })
 
   it('should return an array', function () {
-    const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+    const result = findAllUniqueValues(filterArrTwo)
     assert.typeOf(result, 'array')
   })
 
   it('should return an array of three items', function () {
-    const result = findAllUniqueValues(filterByPropsAndValuesDummy)
+    const result = findAllUniqueValues(filterArrTwo)
     assert.strictEqual(result.length, 3)
   })
 
   it('should return an three different regions', function () {
-    const result = findAllUniqueValues(filterByPropsAndValuesDummy)
-    assert.strictEqual(result.includes('Germany'), true)
-    assert.strictEqual(result.includes('Ireland'), true)
-    assert.strictEqual(result.includes('Spain'), true)
+    const result = findAllUniqueValues(filterArrTwo)
+    console.dir(result)
+    assert.strictEqual(result.includes('germany'), true)
+    assert.strictEqual(result.includes('nordics'), true)
+    assert.strictEqual(result.includes('uk'), true)
   })
 
   it('should return data in alphabetical order', function () {
-    const result = findAllUniqueValues(filterByPropsAndValuesDummy)
-    assert.strictEqual(result[0] === 'Germany', true)
-    assert.strictEqual(result[1] === 'Ireland', true)
-    assert.strictEqual(result[2] === 'Spain', true)
+    const result = findAllUniqueValues(filterArrTwo)
+    assert.strictEqual(result[0] === 'germany', true)
+    assert.strictEqual(result[1] === 'nordics', true)
+    assert.strictEqual(result[2] === 'uk', true)
   })
 })
 
@@ -232,22 +281,22 @@ describe('compareAndFilter_TwoArrays', () => {
   ]
 
   it('should return defined', function () {
-    const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo)
+    const result = compareAndFilter_twoArrays(arrayOne, arrayTwo)
     expect(result).not.to.be.undefined
   })
 
   it('should return an array', function () {
-    const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo)
+    const result = compareAndFilter_twoArrays(arrayOne, arrayTwo)
     assert.typeOf(result, 'array')
   })
 
   it('should return an array of seven items', function () {
-    const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo)
+    const result = compareAndFilter_twoArrays(arrayOne, arrayTwo)
     assert.strictEqual(result.length, 7)
   })
 
   it('should return an array containing all of the items in arrayTwo', function () {
-    const result = compareAndFilter_TwoArrays(arrayOne, arrayTwo)
+    const result = compareAndFilter_twoArrays(arrayOne, arrayTwo)
     assert.equal(
       result[0].node.caseStudyFields.filterTags.toString(),
       arrayTwo[3]
@@ -268,7 +317,7 @@ describe('compareAndFilter_TwoArrays', () => {
 
   it('should return an array of 4 containing all if two categories', function () {
     const arrayThree = ['Hazardous goods', 'Pharmaceuticals']
-    const result = compareAndFilter_TwoArrays(arrayOne, arrayThree)
+    const result = compareAndFilter_twoArrays(arrayOne, arrayThree)
     assert.strictEqual(result.length, 4)
   })
 })

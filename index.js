@@ -8,7 +8,7 @@ import * as R from 'ramda'
  * @returns {array}
  */
 
-const compareAndFilter_TwoArrays = (arr, tags) => {
+const compareAndFilter_twoArrays = (arr, tags) => {
   const filterByTags = R.curry((tags, arr) =>
     R.filter(
       R.pipe(
@@ -158,7 +158,7 @@ export {
   findAllUniqueValues,
   removeEmptyArrayItems,
   findAllUniqueValuesFlatMap,
-  compareAndFilter_TwoArrays,
+  compareAndFilter_twoArrays,
   sortByDateAsc,
   sortByDateDesc,
   changePropArrayValueFromNestedObject
